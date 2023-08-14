@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/MurilloYonamine/Projeto-Jogo-2D/issues"
   },
-  "homepage": "https://github.com/MurilloYonamine/Projeto-Jogo-2D#readme"
+  "homepage": "https://github.com/MurilloYonamine/Projeto-Jogo-2D#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.6.0",
+    "sequelize": "^6.32.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
 }
