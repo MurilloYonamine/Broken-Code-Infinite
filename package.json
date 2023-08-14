@@ -1,0 +1,20 @@
+{
+  "name": "jogo",
+  "version": "1.0.0",
+  "description": "Projeto de Jogo 2D da turma TI93",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MurilloYonamine/Projeto-Jogo-2D.git"
+  },
+  "author": "TI93",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MurilloYonamine/Projeto-Jogo-2D/issues"
+  },
+  "homepage": "https://github.com/MurilloYonamine/Projeto-Jogo-2D#readme"
+}
