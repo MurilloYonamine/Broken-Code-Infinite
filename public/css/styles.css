@@ -11,9 +11,18 @@ position: absolute !important;
 }
 } */
 body {
+
     background-image: url("/images/fungog.gif");
     padding: 0;
     margin: 0;
+
+}
+
+h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: aliceblue;
+
+    position: relative;
 }
 
 .label1 {
@@ -21,6 +30,10 @@ body {
     color: aliceblue;
     /* background-color: aqua; */
     position: relative;
+
+
+
+
 }
 
 #test {
@@ -44,23 +57,43 @@ body {
 }
 
 .modal .content {
-    background-image: url("images/fundo2.png");
+    background-image: url("/images/fundologin2.png");
     font-family: 'Press Start 2P', cursive;
     margin: auto;
     padding: 20px;
     border-radius: 5px;
-    width: 98%;
-    height: 90%;
+    width: 97%;
+    height: 92%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
+    /* box-shadow: rgba(6, 71, 1, 0.5) 0px 22px 70px 4px; */
+    border: solid black 2px;
+
 }
 
 #caixa {
-    background-color: green;
-    width: 70%;
-    height: 25%;
+    background-image: url("/Images/ffundo.png");
+    width: 40%;
+    height: 35%;
     margin: 15% auto;
+    border: solid green 2px;
+    min-width: 400px;
+    min-height: 310px;
+
+
+
+}
+
+#caixa2 {
+    background-image: url("/Images/ffundo.png");
+    width: 40%;
+    height: 40%;
+    margin: 15% auto;
+    border: solid green 2px;
+    min-width: 400px;
+    min-height: 310px;
 }
 
 .modal #sobre {
