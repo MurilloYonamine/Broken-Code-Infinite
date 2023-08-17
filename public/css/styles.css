@@ -4,44 +4,35 @@
     }
 }
 
-/* @media only screen and (max-width: 630px){
-.pastas {
-display: block !important;
-position: absolute !important;
+@font-face {
+    font-family: Pixel;
+    src: url(PressStart2P-Regular.ttf);
 }
-} */
+
 body {
 
-    background-image: url("/images/fungog.gif");
-    padding: 0;
-    margin: 0;
+    background-image: url("/img/fungog.gif");
+    overflow-x: hidden;
 
 }
 
 h2 {
-    font-family: 'Press Start 2P', cursive;
+    font-family: Pixel;
     color: aliceblue;
 
     position: relative;
 }
 
 .label1 {
-    font-family: 'Press Start 2P', cursive;
+    font-family: Pixel;
     color: aliceblue;
-    /* background-color: aqua; */
     position: relative;
-
-
-
-
 }
 
 #test {
     position: relative;
     top: -300px;
     right: 50px;
-
-
 }
 
 .modal {
@@ -57,8 +48,8 @@ h2 {
 }
 
 .modal .content {
-    background-image: url("/images/fundologin2.png");
-    font-family: 'Press Start 2P', cursive;
+    background-image: url("/img/fundologin2.png");
+    font-family: Pixel;
     margin: auto;
     padding: 20px;
     border-radius: 5px;
@@ -68,26 +59,21 @@ h2 {
     flex-direction: column;
     align-items: center;
     color: white;
-    /* box-shadow: rgba(6, 71, 1, 0.5) 0px 22px 70px 4px; */
     border: solid black 2px;
-
 }
 
 #caixa {
-    background-image: url("/Images/ffundo.png");
+    background-image: url("/img/ffundo.png");
     width: 40%;
     height: 35%;
     margin: 15% auto;
     border: solid green 2px;
     min-width: 400px;
     min-height: 310px;
-
-
-
 }
 
 #caixa2 {
-    background-image: url("/Images/ffundo.png");
+    background-image: url("/img/ffundo.png");
     width: 40%;
     height: 40%;
     margin: 15% auto;
@@ -98,7 +84,7 @@ h2 {
 
 .modal #sobre {
     background-color: greenyellow;
-    font-family: 'Press Start 2P', cursive;
+    font-family: Pixel;
     margin: 5% auto;
     padding: 20px;
     border-radius: 5px;
@@ -112,7 +98,7 @@ h2 {
 
 .modal #rank {
     background-color: greenyellow;
-    font-family: 'Press Start 2P', cursive;
+    font-family: Pixel;
     margin: 15% auto;
     padding: 20px;
     border-radius: 5px;
@@ -120,10 +106,6 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-section {
-    margin-top: 1000px;
 }
 
 #erro {
@@ -140,4 +122,10 @@ section {
 
 #div2 {
     text-align: center;
+}
+
+p {
+    font-size: 10px;
+    margin: 15% auto;
+    color: aquamarine;
 }
