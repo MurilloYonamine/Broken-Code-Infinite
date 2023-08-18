@@ -18,9 +18,6 @@ Este é o repositório do projeto de plataforma 2D desenvolvido como parte do cu
 4. Execute o servidor local usando `npm start`.
 5. Acesse o jogo em `http://localhost:3000`.
 
-**Screenshot:**
-
-(Adicione aqui uma captura de tela da tela de início ou qualquer outra parte relevante do jogo.)
 
 Este projeto é uma realização conjunta da turma TI93 do Senac Santana e foi guiado pelas instruções e conhecimentos do professor Rogério. O jogo de plataforma 2D busca inspiração no cotidiano dos alunos e professores, proporcionando uma experiência de jogo única e divertida. Se você tiver alguma dúvida ou feedback sobre o projeto, sinta-se à vontade para entrar em contato com a equipe de desenvolvimento.
 
