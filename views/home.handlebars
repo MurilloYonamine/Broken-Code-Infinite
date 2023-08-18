@@ -1,65 +1,3 @@
-<div class="modal " id="modal">
-    <div class="row rounded-4" id="caixa">
-        <div id="login" class="content">
-            <!-- Insire seu conteúdo -->
-            <h2>Login</h2>
-            <hr>
-            <form action="/home/" method="post">
-                <label for="nick">Nickname:</label><br>
-                <input type="text" id="nick" name="nick" value=""><br>
-                <label for="senha">Senha:</label><br>
-                <input type="text" id="senha" name="senha" value=""><br><br>
-                <div id='erro'>
-                    {{#if messages.message}}
-                    {{messages.message}}
-                    {{/if}}
-                </div>
-                <input type="submit" onclick="" value="Logar" name="logar">
-                <div class="float-sm-end">
-                    <input type="button" id="btnCriar" value="Criar">
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-<div class="modal" id="modal2">
-    <div class="row rounded-4" id="caixa2">
-        <div class="content">
-            <h2>Sign up</h2>
-            <hr>
-            <!-- Insire seu conteúdo -->
-            <form action="/registrar" method="post">
-                <label for="cnome">Nome:</label><br>
-                <input type="text" name="cnome" id="cnome"><br>
-                <label for="cnick">Nickname:</label><br>
-                <input type="text" name="cnick" id="cnick"><br>
-                <label for="csenha">Senha:</label><br>
-                <input type="text" name="csenha" id="csenha"><br><br>
-                <input type="submit" value="Cadastrar">
-                <div class="float-sm-end" id="entrar">
-                    <p><ins>Entrar</ins></p>
-                </div>
-
-            </form>
-        </div>
-    </div>
-</div>
-
-<div class="modal" id="modals">
-    <div id="sobre" class="content">
-        <!-- Insire seu conteúdo -->
-
-
-    </div>
-</div>
-<div class="modal" id="modalr">
-    <div id="rank" class="content">
-        <!-- Insire seu conteúdo -->
-
-
-    </div>
-</div>
 <section class="row justify-content-md-center">
     <div id="div2" class="col-12 mt-5">
 
@@ -88,6 +26,3 @@
 
     </div>
 </section>
-</body>
-
-</html>

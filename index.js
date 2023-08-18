@@ -3,6 +3,7 @@ const exphbs = require("express-handlebars");
 const sessions = require("express-session");
 const FileStore = require("session-file-store")(sessions);
 const flash = require("express-flash");
+const path = require('path');
 
 const app = express();
 
@@ -19,8 +20,18 @@ const authRoutes = require("./routes/authRoutes");
 const HomeController = require('./controllers/HomeControler');
 
 // Template engine
-app.engine('handlebars', exphbs.engine());
+app.engine('handlebars', exphbs.engine({ 
+    extname: 'handlebars', 
+    defaultLayout: 'layouts/main', 
+    layoutsDir: path.join(__dirname, 'views/'),
+    partialsDir: [
+        path.join(__dirname, 'views/'),
+    ]
+}));
+
 app.set('view engine', 'handlebars');
+
+app.set('views', path.join(__dirname, 'views'));
 
 // receber resposta do body
 app.use(

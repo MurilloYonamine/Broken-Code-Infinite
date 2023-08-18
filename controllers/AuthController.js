@@ -4,27 +4,32 @@ const bcrypt = require("bcryptjs");
 
 module.exports = class AuthController {
     static login(req, res) {
-        res.render('home');
+        res.render('folders/login');
     }
 
     static registrar(req, res) {
-        res.render('auth/registrar');
+        res.render('home');
     }
-
     static async loginPost(req, res) {
-        const { nick, senha } = req.body;
+        const { nickname, senha } = req.body;
+        const confirmarSenha = '123';
 
-        if (senha != "") {
-            req.flash('message', 'Usuário ou Senha não encontrados!');
-            return;
+        if (senha !== confirmarSenha) {
+            req.flash('message', 'As senhas não conferem, tente novamente!');
+            res.redirect('home');
+            return
+        } else {
+            return res.redirect('home');
         }
     }
     static async registrarPost(req, res) {
-        const { cnome, cnick, csenha } = req.body;
+        const { nome, nickname, senha } = req.body;
+        const confirmarSenha = '123';
 
-        if (csenha != "") {
-            req.flash('message', 'Usuário ou Senha não encontrados!');
-            return;
+        if (senha !== confirmarSenha) {
+            req.flash('message', 'As senhas não conferem, tente novamente!');
+            return res.redirect('home');
         }
     }
+
 };
