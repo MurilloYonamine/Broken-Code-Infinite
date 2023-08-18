@@ -11,6 +11,7 @@ const conn = require("./db/conn");
 
 // Models
 const user = require('./models/User');
+const pontuacao = require('./models/Pontuacao');
 
 // Import Routes
 const homeRoutes = require("./routes/homeRoutes");
@@ -20,9 +21,9 @@ const authRoutes = require("./routes/authRoutes");
 const HomeController = require('./controllers/HomeControler');
 
 // Template engine
-app.engine('handlebars', exphbs.engine({ 
-    extname: 'handlebars', 
-    defaultLayout: 'layouts/main', 
+app.engine('handlebars', exphbs.engine({
+    extname: 'handlebars',
+    defaultLayout: 'layouts/main',
     layoutsDir: path.join(__dirname, 'views/'),
     partialsDir: [
         path.join(__dirname, 'views/'),

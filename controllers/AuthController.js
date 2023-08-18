@@ -8,27 +8,27 @@ module.exports = class AuthController {
     }
 
     static registrar(req, res) {
-        res.render('home');
+        res.render('folders/registrar');
     }
     static async loginPost(req, res) {
         const { nickname, senha } = req.body;
         const confirmarSenha = '123';
-
+    
         if (senha !== confirmarSenha) {
-            req.flash('message', 'As senhas não conferem, tente novamente!');
-            res.redirect('home');
-            return
+            req.flash('message', true);
+            res.redirect('/home');
         } else {
-            return res.redirect('home');
+            req.flash('message', false);
+            res.redirect('/home');
         }
     }
+    
     static async registrarPost(req, res) {
-        const { nome, nickname, senha } = req.body;
-        const confirmarSenha = '123';
+        const checkIfUserExists = await User.findOne({where: {UsNickname: nickname}})
 
-        if (senha !== confirmarSenha) {
-            req.flash('message', 'As senhas não conferem, tente novamente!');
-            return res.redirect('home');
+        if(checkIfUserExists) {
+            req.flash('message', 'O nick já está em uso!');
+            res.redirect('/home');
         }
     }
 

@@ -25,6 +25,11 @@ h2 {
     padding-bottom: 5%;
 }
 
+#erro {
+    font-size: 0.5em;
+    color: red;
+}
+
 .form-buttons {
     display: flex;
     justify-content: space-between;
@@ -34,12 +39,6 @@ h2 {
 .label1 {
     color: aliceblue;
     position: relative;
-}
-
-#test {
-    position: relative;
-    top: -300px;
-    right: 50px;
 }
 
 .modal {

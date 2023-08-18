@@ -108,5 +108,4 @@ const switchModalRank = () => {
     }
 };
 const btnrank = document.querySelector('#pasta1');
-btnrank.addEventListener('click', switchModalRank)
-
+btnrank.addEventListener('click', switchModalRank);

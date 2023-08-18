@@ -1,20 +1,28 @@
 const { DataTypes } = require('sequelize');
-
 const db = require("../db/conn");
 
-const User = db.define('User', {
-    name: {
-        type: DataTypes.STRING,
-        require: true
+const User = db.define('tb_usuarios', {
+    UsCodigo: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true
     },
-    nickname: {
+    UsNome: {
         type: DataTypes.STRING,
-        require: true
+        allowNull: false
     },
-    senha: {
+    UsNickname: {
         type: DataTypes.STRING,
-        require: true
+        allowNull: false,
+        unique: true
+    },
+    UsSenha: {
+        type: DataTypes.STRING,
+        allowNull: false
     }
+}, {
+    createdAt: 'DataCriacao', 
+    updatedAt: 'DataAtualizacao'
 });
 
 module.exports = User;

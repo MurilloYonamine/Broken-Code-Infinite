@@ -21,6 +21,15 @@
                     <input type="text" name="csenha" id="csenha">
                 </div>
 
+                <div id='erro' style="display: block;">
+                    {{#if messages.message}}
+                    <script>
+                        let registrar = document.querySelector("#modal2").style.display = 'block';
+                    </script>
+                    <div>Usuários e Senhas não conferem, tente novamente.</div>
+                    {{/if}}
+                </div>
+
                 <div class="form-buttons">
                     <input type="submit" value="Cadastrar">
                     <div id="entrar">
