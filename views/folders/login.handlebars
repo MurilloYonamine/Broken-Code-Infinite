@@ -1,32 +1,30 @@
 <div class="modal " id="modal">
     <div class="row rounded-4" id="caixa">
         <div id="login" class="content">
-            <!-- Insire seu conteúdo -->
             <h2>Login</h2>
             <hr>
             <form action="/login" method="POST">
-
-                <div class="form-control">
+                <div class="form-group">
                     <label for="nick">Nickname:</label>
                     <input type="text" id="nick" name="nick">
                 </div>
 
-                <div class="form-control">
+                <div class="form-group">
                     <label for="senha">Senha:</label>
                     <input type="text" id="senha" name="senha">
                 </div>
 
-                <input type="submit" onclick="" value="Logar" name="logar">
-                <div class="float-sm-end">
+                <div class="form-buttons">
+                    <input type="submit" value="Logar" name="logar">
                     <input type="button" id="btnCriar" value="Criar">
-                </div> 
+                </div>
 
                 <div id='erro' style="display: block">
                     {{#if messages.message}}
                     <div>{{messages.message}}</div>
                     {{/if}}
                 </div>
-            </form>
         </div>
+        </form>
     </div>
 </div>

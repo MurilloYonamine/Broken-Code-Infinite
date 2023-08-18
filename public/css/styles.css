@@ -4,27 +4,34 @@
     }
 }
 
-@font-face {
-    font-family: Pixel;
-    src: url(PressStart2P-Regular.ttf);
+* {
+    font-family: 'Press Start 2P', cursive;
 }
 
 body {
-
     background-image: url("/img/fungog.gif");
     overflow-x: hidden;
-
 }
 
 h2 {
-    font-family: Pixel;
     color: aliceblue;
 
     position: relative;
 }
 
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5%;
+}
+
 .label1 {
-    font-family: Pixel;
     color: aliceblue;
     position: relative;
 }
@@ -49,7 +56,6 @@ h2 {
 
 .modal .content {
     background-image: url("/img/fundologin2.png");
-    font-family: Pixel;
     margin: auto;
     padding: 20px;
     border-radius: 5px;
@@ -84,7 +90,6 @@ h2 {
 
 .modal #sobre {
     background-color: greenyellow;
-    font-family: Pixel;
     margin: 5% auto;
     padding: 20px;
     border-radius: 5px;
@@ -98,8 +103,7 @@ h2 {
 
 .modal #rank {
     background-color: greenyellow;
-    font-family: Pixel;
-    margin: 15% auto;
+    margin: 2% auto;
     padding: 20px;
     border-radius: 5px;
     width: 50%;
