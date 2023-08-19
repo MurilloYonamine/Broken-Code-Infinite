@@ -4,6 +4,16 @@
             <h2>Login</h2>
             <hr>
             <form action="/login" method="POST">
+
+                <div id='sucessoCadastro' style="display: block;">
+                    {{#if messages.cadastro}}
+                    <script>
+                        let sucessoCadastro = document.querySelector("#modal").style.display = 'block';
+                    </script>
+                    <div>{{messages.cadastro}}</div>
+                    {{/if}}
+                </div>
+
                 <div class="form-group">
                     <label for="nick">Nickname:</label>
                     <input type="text" id="nick" name="nick">
@@ -15,11 +25,11 @@
                 </div>
 
                 <div id='erro' style="display: block;">
-                    {{#if messages.message}}
+                    {{#if messages.erroLogin}}
                     <script>
                         let login = document.querySelector("#modal").style.display = 'block';
                     </script>
-                    <div>Usuários e Senhas não conferem, tente novamente.</div>
+                    <div>{{messages.erroLogin}}</div>
                     {{/if}}
                 </div>
 

@@ -22,11 +22,11 @@
                 </div>
 
                 <div id='erro' style="display: block;">
-                    {{#if messages.message}}
+                    {{#if messages.erroRegistrar}}
                     <script>
-                        let registrar = document.querySelector("#modal2").style.display = 'block';
+                        let login = document.querySelector("#modal2").style.display = 'block';
                     </script>
-                    <div>Usuários e Senhas não conferem, tente novamente.</div>
+                    <div>{{messages.erroRegistrar}}</div>
                     {{/if}}
                 </div>
 

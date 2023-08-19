@@ -30,6 +30,11 @@ h2 {
     color: red;
 }
 
+#sucessoCadastro {
+    font-size: 0.5em;
+    color: blue;
+}
+
 .form-buttons {
     display: flex;
     justify-content: space-between;
