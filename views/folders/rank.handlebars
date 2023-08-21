@@ -1,5 +1,12 @@
 <div class="modal" id="modalr">
     <div id="rank" class="content">
-        <!-- Insira seu conteúdo para a seção "Rank" -->
+        <h1>FAZ O L</h1>
+        <ul>
+            {{#each pontuacoes}}
+            <li>
+                {{this.PoUsCodigo}} - {{this.tb_usuario.UsNome}} - {{this.PoPontuacao}}
+            </li>
+            {{/each}}
+        </ul>
     </div>
 </div>

@@ -22,4 +22,5 @@ const User = db.define('tb_usuarios', {
     updatedAt: 'DataAtualizacao'
 });
 
+
 module.exports = User;
