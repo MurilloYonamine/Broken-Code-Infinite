@@ -82,7 +82,7 @@ app.use((req, res, next) => {
 //Routes
 app.use('/home', homeRoutes);
 app.use('/', authRoutes);
-app.use('/folders/rank', pontRoutes);
+app.use('/', pontRoutes);
 app.get('/folders/rank', PontController.mostrarPontuacao);
 app.get('/', HomeController.acessoHome);
 
