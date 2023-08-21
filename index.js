@@ -16,9 +16,11 @@ const pontuacao = require('./models/Pontuacao');
 // Import Routes
 const homeRoutes = require("./routes/homeRoutes");
 const authRoutes = require("./routes/authRoutes");
+const pontRoutes = require("./routes/pontRoutes");
 
 // Import Controller
 const HomeController = require('./controllers/HomeControler');
+const PontController = require('./controllers/PontController');
 
 // Template engine
 app.engine('handlebars', exphbs.engine({
@@ -74,15 +76,15 @@ app.use((req, res, next) => {
     if (req.session.useid) {
         res.locals.session = req.session;
     }
-
     next();
 });
 
 //Routes
 app.use('/home', homeRoutes);
 app.use('/', authRoutes);
+app.use('/folders/rank', pontRoutes);
+app.get('/folders/rank', PontController.mostrarPontuacao);
 app.get('/', HomeController.acessoHome);
-
 
 conn.sync().then(() => {
     app.listen(3000);

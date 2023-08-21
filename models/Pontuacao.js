@@ -30,5 +30,6 @@ const Pontuacao = db.define('tb_pontuacao', {
         }
     ]
 });
+Pontuacao.belongsTo(User, { foreignKey: 'PoUsCodigo' }); 
 
 module.exports = Pontuacao;
