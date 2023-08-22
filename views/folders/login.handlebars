@@ -6,30 +6,30 @@
             <form action="/login" method="POST">
 
                 <div id='sucessoCadastro' style="display: block;">
-                    {{#if messages.cadastro}}
+                    {{#if registrarMensagem}}
                     <script>
                         let sucessoCadastro = document.querySelector("#modal").style.display = 'block';
                     </script>
-                    <div>{{messages.cadastro}}</div>
+                    <div>{{registrarMensagem}}</div>
                     {{/if}}
                 </div>
 
                 <div class="form-group">
                     <label for="nick">Nickname:</label>
-                    <input type="text" id="nick" name="nick">
+                    <input type="text" id="nick" name="nick" required>
                 </div>
 
                 <div class="form-group">
                     <label for="senha">Senha:</label>
-                    <input type="text" id="senha" name="senha">
+                    <input type="password" id="senha" name="senha" required>
                 </div>
 
                 <div id='erro' style="display: block;">
-                    {{#if messages.erroLogin}}
+                    {{#if erroLogin}}
                     <script>
                         let login = document.querySelector("#modal").style.display = 'block';
                     </script>
-                    <div>{{messages.erroLogin}}</div>
+                    <div>{{erroLogin}}</div>
                     {{/if}}
                 </div>
 

@@ -19,9 +19,9 @@
 
 <body>
     {{> folders/login}}
-    {{#if messages.login}}
+    {{#if loginMensagem}}
     <script>
-        alert(`${{{messages.login}}}`)
+        alert(`${{{ loginMensagem }}}`)
     </script>
     {{/if}}
     {{> folders/registrar}}

@@ -9,13 +9,16 @@ const User = db.define('tb_usuarios', {
     },
     UsNome: {
         type: DataTypes.STRING,
+        require: true,
     },
     UsNickname: {
         type: DataTypes.STRING,
         unique: true,
+        require: true,
     },
     UsSenha: {
         type: DataTypes.STRING,
+        require: true,
     }
 }, {
     createdAt: 'DataCriacao',

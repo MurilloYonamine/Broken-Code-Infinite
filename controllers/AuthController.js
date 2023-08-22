@@ -11,8 +11,7 @@ module.exports = class AuthController {
         const user = await User.findOne({ where: { UsNickname: nick } });
 
         if (!user) {
-            req.flash("erroLogin", "Nick não encontrado!");
-            res.redirect('/');
+            res.render('home', { erroLogin: "Nick não encontrado!" });
             return;
         }
 
@@ -20,31 +19,17 @@ module.exports = class AuthController {
         const passwordMatch = bcrypt.compareSync(senha, user.UsSenha);
 
         if (!passwordMatch) {
-            req.flash("erroLogin", "Senha incorreta!");
-            res.redirect('/');
+            res.render('home', { erroLogin: "Senha incorreta!" });
             return;
         }
 
         //Inicialização sessão
-        req.session.userid = user.id;
 
-        req.flash('login', 'Login realizado com sucesso!');
-
-        req.session.save(() => {
-            res.redirect('/');
-        });
-
+        res.render('home', { loginMensagem: 'Login realizado com sucesso!' });
     }
 
     static async registrarPost(req, res) {
         const { cnome, cnick, csenha } = req.body;
-        const ChecarSeNickExistir = await User.findOne({ where: { UsNickname: cnick } });
-
-        if (ChecarSeNickExistir) {
-            req.flash("erroRegistrar", "Esse nick já existe!");
-            res.redirect('/');
-            return;
-        }
 
         const salt = bcrypt.genSaltSync(2);
         const senhaCriptograda = bcrypt.hashSync(csenha, salt);
@@ -56,12 +41,12 @@ module.exports = class AuthController {
         };
         try {
             await User.create(user);
-            req.flash("cadastro", "cadastro realizado com sucesso!");
-            res.redirect('/');
-
+            res.render('home', { registrarMensagem: 'Usuário criado com sucesso!' });
         } catch (err) {
-            console.log(err);
+            const ChecarSeNickExistir = await User.findOne({ where: { UsNickname: cnick } });
+            if (ChecarSeNickExistir) {
+                res.render('home', { erroCadastro: 'Nickname já existe!' });
+            }
         }
     }
-
 };

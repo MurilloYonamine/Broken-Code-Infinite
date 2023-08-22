@@ -1,8 +1,6 @@
 const express = require('express');
 const exphbs = require("express-handlebars");
-const sessions = require("express-session");
-const FileStore = require("session-file-store")(sessions);
-const flash = require("express-flash");
+
 const path = require('path');
 
 const app = express();
@@ -14,13 +12,10 @@ const user = require('./models/User');
 const pontuacao = require('./models/Pontuacao');
 
 // Import Routes
-const homeRoutes = require("./routes/homeRoutes");
 const authRoutes = require("./routes/authRoutes");
 const pontRoutes = require("./routes/pontRoutes");
+const homeRoutes = require("./routes/homeRoutes");
 
-// Import Controller
-const HomeController = require('./controllers/HomeControler');
-const PontController = require('./controllers/PontController');
 
 // Template engine
 app.engine('handlebars', exphbs.engine({
@@ -45,48 +40,16 @@ app.use(
 
 app.use(express.json());
 
-// session middleware
-app.use(
-    sessions({
-        name: "session",
-        secret: "nosso_secret",
-        resave: false,
-        saveUninitialized: false,
-        store: new FileStore({
-            logFn: function () { },
-            path: require("path").join(require('os').tmpdir(), 'sessions'),
-        }),
-        cookie: {
-            secure: false,
-            maxAge: 360000,
-            expires: new Date(Date.now() + 360000),
-            httpOnly: true
-        }
-    })
-);
-
-// flash messages
-app.use(flash());
-
 //public path
 app.use(express.static('public'));
 
-// set session to res
-app.use((req, res, next) => {
-    if (req.session.useid) {
-        res.locals.session = req.session;
-    }
-    next();
-});
-
 //Routes
-app.use('/home', homeRoutes);
+
 app.use('/', authRoutes);
 app.use('/', pontRoutes);
-app.get('/folders/rank', PontController.mostrarPontuacao);
-app.get('/', HomeController.acessoHome);
+app.use('/', homeRoutes);
 
 
 conn.sync().then(() => {
     app.listen(3000);
-}).catch((err) => console.log(err));
+}).catch((err) => console.log(err));;

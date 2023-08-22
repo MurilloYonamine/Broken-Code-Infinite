@@ -81,6 +81,7 @@ btnCriar.addEventListener('click', switchModal2);
 const btnEntrar = document.querySelector("#entrar");
 
 btnEntrar.addEventListener('click', switchModal2);
+btnEntrar.style.cursor = "pointer";
 
 const switchModalSobre = () => {
     const modal = document.querySelector('#modals');
