@@ -8,8 +8,6 @@ module.exports = class PontController {
 
             let pontuacoes = pontuacoesData.map((result) => result.get({ plain: true }));
 
-            console.log(pontuacoes);
-
             res.render('home', { pontuacoes });
         } catch (error) {
             console.error(error);

@@ -86,6 +86,7 @@ app.use('/', pontRoutes);
 app.get('/folders/rank', PontController.mostrarPontuacao);
 app.get('/', HomeController.acessoHome);
 
+
 conn.sync().then(() => {
     app.listen(3000);
 }).catch((err) => console.log(err));

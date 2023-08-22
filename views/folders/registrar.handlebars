@@ -1,7 +1,7 @@
 <div class="modal" id="modal2">
     <div class="row rounded-4" id="caixa2">
         <div class="content">
-            <h2>Sign up</h2>
+            <h2>Cadastro</h2>
             <hr>
             <!-- Insire seu conteúdo -->
             <form action="/registrar" method="POST">
@@ -27,6 +27,11 @@
                         let login = document.querySelector("#modal2").style.display = 'block';
                     </script>
                     <div>{{messages.erroRegistrar}}</div>
+
+                    {{else}}
+                    <script>
+                        let login = document.querySelector("#modal").style.display = 'block';
+                    </script>
                     {{/if}}
                 </div>
 
