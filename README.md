@@ -15,8 +15,9 @@ Este é o repositório do projeto de plataforma 2D desenvolvido como parte do cu
 1. Clone o repositório para sua máquina local usando `git clone https://github.com/MurilloYonamine/Projeto-Jogo-2D.git`.
 2. Navegue até o diretório do projeto usando `cd Projeto-Jogo-2D`.
 3. Instale as dependências utilizando `npm install`.
-4. Execute o servidor local usando `npm start`.
-5. Acesse o jogo em `http://localhost:3000`.
+4. Crie um banco de dados com o nome "bdjogoti93".
+5. Execute o servidor local usando `npm start`.
+6. Acesse o jogo em `http://localhost:3000`.
 
 
 Este projeto é uma realização conjunta da turma TI93 do Senac Santana e foi guiado pelas instruções e conhecimentos do professor Rogério. O jogo de plataforma 2D busca inspiração no cotidiano dos alunos e professores, proporcionando uma experiência de jogo única e divertida. Se você tiver alguma dúvida ou feedback sobre o projeto, sinta-se à vontade para entrar em contato com a equipe de desenvolvimento.
