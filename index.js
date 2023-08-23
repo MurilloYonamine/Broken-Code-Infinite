@@ -50,6 +50,6 @@ app.use('/', pontRoutes);
 app.use('/', homeRoutes);
 
 
-conn.sync().then(() => {
+conn.sync(/*{ force: true }*/).then(() => {
     app.listen(3000);
 }).catch((err) => console.log(err));;
