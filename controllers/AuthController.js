@@ -1,4 +1,5 @@
 const { create } = require("express-handlebars");
+const Pontuacao = require("../models/Pontuacao");
 const User = require("../models/User");
 
 const bcrypt = require("bcryptjs");
@@ -41,15 +42,21 @@ module.exports = class AuthController {
       UsSenha: senhaCriptograda,
     };
     try {
+      const pontuacoesData = await Pontuacao.findAll({ include: User });
+
+      let pontuacoes = pontuacoesData.map((result) => result.get({ plain: true }));
       await User.create(user);
-      res.render("home", { registrarMensagem: "Usuário criado com sucesso!" });
+      res.render("home", { registrarMensagem: "Usuário criado com sucesso!", pontuacoes });
     } catch (err) {
+
       const ChecarSeNickExistir = await User.findOne({
         where: { UsNickname: cnick },
       });
+
       if (ChecarSeNickExistir) {
         res.render("home", { erroCadastro: "Nickname já existe!" });
       }
+      
     }
   }
 };
