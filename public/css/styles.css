@@ -93,7 +93,6 @@ h2 {
 }
 
 .modal #sobre {
-    background-color: greenyellow;
     margin: 5% auto;
     padding: 20px;
     border-radius: 5px;
@@ -106,7 +105,6 @@ h2 {
 }
 
 .modal #rank {
-    background-color: greenyellow;
     margin: 2% auto;
     padding: 20px;
     border-radius: 5px;
@@ -114,6 +112,12 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
+}
+
+.modal footer {
+    position: absolute;
+    bottom: 0;
 }
 
 #erro {
@@ -136,4 +140,20 @@ p {
     font-size: 10px;
     margin: 15% auto;
     color: aquamarine;
+}
+
+/* Ranking */
+table {
+    display: flex;
+    justify-content: space-between;
+}
+
+#titulo {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+tr td {
+    text-align: center;
+    font-size: 1.2em;
 }

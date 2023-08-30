@@ -8,11 +8,11 @@ const User = db.define('tb_usuarios', {
         primaryKey: true
     },
     UsNome: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(50),
         require: true,
     },
     UsNickname: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(3),
         unique: true,
         require: true,
     },

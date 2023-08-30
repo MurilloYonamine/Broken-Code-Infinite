@@ -1,12 +1,40 @@
 <div class="modal" id="modalr">
     <div id="rank" class="content">
-        <h1>RANK</h1>
-        <ul>
+        <table>
+            <tr>
+                <td colspan="3" id="titulo">RANKING</td>
+            </tr>
+            <tr>
+                <td colspan="3" id="titulo"> MELHORES PONTUAÇOES </td>
+            </tr>
             {{#each pontuacoes}}
-            <li>
-                {{this.PoUsCodigo}} - {{this.tb_usuario.UsNickname}} - {{this.PoPontuacao}}
-            </li>
+            <tr>
+                <td class="posicao">{{this.posicao}}.</td>
+                <td>{{this.tb_usuario.UsNickname}}</td>
+                <td>{{this.PoPontuacao}}</td>
+            </tr>
             {{/each}}
-        </ul>
+        </table>
+
+
+        <footer>
+            <p>&copy; TI93 2023. Todos os direitos reservados.</p>
+        </footer>
+
+        <script>
+            let posicoes = document.getElementsByClassName('posicao');
+            console.log(posicoes)
+            for (let i = 0; i < posicoes.length; i++) {
+                if (posicoes[i].innerText === '1.') {
+                    posicoes[i].style.color = "#ffd700";
+                } else if (posicoes[i].innerText === '2.') {
+                    posicoes[i].style.color = "#c0c0c0";
+                } else if (posicoes[i].innerText === '3.') {
+                    posicoes[i].style.color = "#cd7f32";
+                }
+            }
+        </script>
+
+
     </div>
 </div>
