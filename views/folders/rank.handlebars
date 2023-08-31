@@ -1,6 +1,14 @@
+<style>
+    table,
+    tr,
+    td {
+        border: 1px solid red;
+    }
+</style>
+
 <div class="modal" id="modalr">
     <div id="rank" class="content">
-        <table>
+        <table onload="pontuacoesPosicao()">
             <tr>
                 <td colspan="3" id="titulo">RANKING</td>
             </tr>
@@ -8,7 +16,7 @@
                 <td colspan="3" id="titulo"> MELHORES PONTUAÇOES </td>
             </tr>
             <tr>
-                <td colspan="3">
+                <td colspan="3" id="input">
                     <input type="search" name="nickRank" id="nickRank" onkeyup="pesquisar()">
                 </td>
             </tr>
@@ -19,15 +27,28 @@
                 <td class="pontuacao">{{this.PoPontuacao}}</td>
             </tr>
             {{/each}}
+            <tr>
+                <td colspan="3" id="footer">
+                    &copy; TI93 2023. Todos os direitos reservados.
+                </td>
+            </tr>
         </table>
 
 
-        <footer>
-            <p>&copy; TI93 2023. Todos os direitos reservados.</p>
-        </footer>
+
 
         <script>
             let posicoes = document.getElementsByClassName('posicao');
+
+            const pontuacoesPosicao = () => {
+                let pontuacoes = document.getElementsByClassName("pontuacoes");
+                for (let i = 0; i < posicoes.length; i++) {
+                    if (posicoes[i].innerText === '21.') {
+                        pontuacoes[i].style.display = "none";
+                        console.log(posicoes[i].innerText);
+                    }
+                }
+            };
 
             const pesquisar = () => {
                 let input = document.getElementById("nickRank").value;

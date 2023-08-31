@@ -9,11 +9,10 @@ module.exports = class PontController {
             const pontuacoesData = await Pontuacao.findAll({ include: User, order: [['PoPontuacao', 'DESC']] });
 
             let pontuacoes = pontuacoesData.map((result, index) => {
-                const pontuacaoPlain = result.get({ plain: true });
-                pontuacaoPlain.posicao = `${index + 1}`;
-                return pontuacaoPlain;
+                    const pontuacaoPlain = result.get({ plain: true });
+                    pontuacaoPlain.posicao = `${index + 1}`;
+                    return pontuacaoPlain;
             });
-
             res.render('home', { pontuacoes });
         } catch (error) {
             console.error(error);
