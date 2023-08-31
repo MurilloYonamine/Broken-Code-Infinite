@@ -157,3 +157,7 @@ tr td {
     text-align: center;
     font-size: 1.2em;
 }
+
+tr td form {
+    margin: 1em 0 1em;
+}
