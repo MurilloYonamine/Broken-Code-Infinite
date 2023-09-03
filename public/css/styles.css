@@ -87,12 +87,13 @@ h2 {
 .modal #sobre {
     margin: 5% auto;
     padding: 20px;
-    border-radius: 5px;
-    width: 80%;
-    height: 70%;
+    border-radius: 5px ;
+    width: 75% ;
+    height: 89%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 
 }
 
