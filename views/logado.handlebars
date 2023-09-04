@@ -71,6 +71,7 @@
 
 
         import { Animacao } from './js/index.js'
+        let container = document.querySelector("#container")
         let animacao = new Animacao();
         let img = document.querySelector("#quadro")
         
@@ -120,6 +121,8 @@
                 console.log("1")
              }
              
+             
+             
             }
             ler()
         animacao.addContador()
@@ -157,9 +160,15 @@
             
 
 
+            if(animacao.getContador() == 9){
+                container.style.display = 'none';
 
+            }
+            else{
+                
             if(pular == true)
             {
+                
             img.src="img/cutscene/"+animacao.getContadorImg()+".png"
             console.log(animacao.getContadorImg())
             animacao.addContadorImg()
@@ -173,6 +182,7 @@
             pular=false
             ler()
             animacao.addContador()
+            }
             }
             
             //     texto.innerHTML = fala[animacao.getContador()-1]
