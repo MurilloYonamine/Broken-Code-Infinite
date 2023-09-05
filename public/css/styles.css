@@ -25,6 +25,17 @@ h2 {
     padding-bottom: 5%;
 }
 
+button{
+    border: none;
+    background-color: transparent;
+}
+
+#divr{
+    display: flex;
+    position: relative;
+    top: 15px;
+}
+
 #erro {
     font-size: 0.5em;
     color: red;
@@ -46,7 +57,7 @@ h2 {
     position: relative;
 }
 
-.modal {
+.modal{
     display: none;
     position: fixed;
     z-index: 1;
@@ -69,7 +80,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     color: white;
-    border: solid black 2px;
+    border: solid black 2px;    
 }
 
 #caixa {
@@ -101,21 +112,15 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    
-
 }
 
-.modal #rank {  
-    background-image: black;
+#rank {
+    background-image: url("/img/fundonovo2.png");
     margin: 2% auto;
     padding: 20px;
     border-radius: 5px;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 30vh;
+    width: 75%;
+    
 }
 
 .modal footer {
@@ -147,6 +152,7 @@ p {
 
 /* Ranking */
 table {
+    color: black;
     display: flex;
     justify-content: space-between;
 }
@@ -154,9 +160,14 @@ table {
 #titulo {
     text-align: center;
     font-size: 1.5em;
+    color: black;
+    position: relative;
+    top: 50px;
 }
 
 #input {
+    position: relative;
+    top: 20px;
     padding: 30px 0 30px;
 }
 

@@ -12,13 +12,14 @@ Este é o repositório do projeto de plataforma 2D desenvolvido como parte do cu
 - Organização do Código: Separação clara das rotas, controladores e modelos para garantir um código bem estruturado e de fácil manutenção.
 
 **Como Executar o Projeto:**
-1. Clone o repositório para sua máquina local usando `git clone https://github.com/MurilloYonamine/Projeto-Jogo-2D.git`.
-2. Navegue até o diretório do projeto usando `cd Projeto-Jogo-2D`.
-3. Instale as dependências utilizando `npm install`.
-4. Baixe, instale e inicialize o Xampp.
-5. Crie um banco de dados com o nome "bdjogoti93".
-6. Execute o servidor local usando `npm start`.
-7. Acesse o jogo em `http://localhost:3000`.
+1. Primeiramente veja se sua máquina tem NodeJS e npm instalado.
+2. Clone o repositório para sua máquina local usando `git clone https://github.com/MurilloYonamine/Projeto-Jogo-2D.git`.
+3. Navegue até o diretório do projeto usando `cd Projeto-Jogo-2D`.
+4. Instale as dependências utilizando `npm install`.
+5. Baixe, instale e inicialize o Xampp.
+6. Crie um banco de dados com o nome "bdjogoti93".
+7. Execute o servidor local usando `npm start`.
+8. Acesse o jogo em `http://localhost:3000`.
 
 
 Este projeto é uma realização conjunta da turma TI93 do Senac Santana e foi guiado pelas instruções e conhecimentos do professor Rogério. O jogo de plataforma 2D busca inspiração no cotidiano dos alunos e professores, proporcionando uma experiência de jogo única e divertida. Se você tiver alguma dúvida ou feedback sobre o projeto, sinta-se à vontade para entrar em contato com a equipe de desenvolvimento.

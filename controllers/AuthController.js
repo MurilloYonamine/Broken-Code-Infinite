@@ -42,9 +42,13 @@ module.exports = class AuthController {
       UsSenha: senhaCriptograda,
     };
     try {
-      const pontuacoesData = await Pontuacao.findAll({ include: User });
+      const pontuacoesData = await Pontuacao.findAll({ include: User, order: [['PoPontuacao', 'DESC']] });
 
-      let pontuacoes = pontuacoesData.map((result) => result.get({ plain: true }));
+      let pontuacoes = pontuacoesData.map((result, index) => {
+        const pontuacaoPlain = result.get({ plain: true });
+        pontuacaoPlain.posicao = `${index + 1}`;
+        return pontuacaoPlain;
+      });
       await User.create(user);
       res.render("home", { registrarMensagem: "Usuário criado com sucesso!", pontuacoes });
     } catch (err) {
@@ -56,7 +60,7 @@ module.exports = class AuthController {
       if (ChecarSeNickExistir) {
         res.render("home", { erroCadastro: "Nickname já existe!" });
       }
-      
+
     }
   }
 };

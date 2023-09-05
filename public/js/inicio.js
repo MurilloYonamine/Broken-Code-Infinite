@@ -110,3 +110,43 @@ const switchModalRank = () => {
 };
 const btnrank = document.querySelector('#pasta1');
 btnrank.addEventListener('click', switchModalRank);
+
+// Ranks
+let posicoes = document.getElementsByClassName('posicao');
+let nicks = document.getElementsByClassName("nicks");
+let pontuacao = document.getElementsByClassName("pontuacao");
+let pageSize = 10;
+let currentPage = 1;
+
+const renderPage = () => {
+    let startIndex = (currentPage - 1) * pageSize;
+    let endIndex = startIndex + pageSize;
+
+    for (let i = 0; i < nicks.length; i++) {
+        if (i >= startIndex && i < endIndex) {
+            nicks[i].style.display = "";
+            pontuacao[i].style.display = "";
+            posicoes[i].style.display = "";
+        } else {
+            nicks[i].style.display = "none";
+            pontuacao[i].style.display = "none";
+            posicoes[i].style.display = "none";
+        }
+    }
+};
+
+renderPage();
+
+document.getElementById('proxButton').addEventListener('click', () => {
+    if (currentPage < Math.ceil(nicks.length / pageSize)) {
+        currentPage++;
+        renderPage();
+    }
+});
+
+document.getElementById('prevButton').addEventListener('click', () => {
+    if (currentPage > 1) {
+        currentPage--;
+        renderPage();
+    }
+});
