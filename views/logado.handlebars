@@ -1,6 +1,6 @@
 <style>
     #container {
-        margin:2% auto;
+        margin: 1% auto;
         width: 50%;
         justify-content: center;
         text-align: center;
@@ -12,14 +12,28 @@
      }
      #jogar{
         display: none;
-         
-         justify-content: center;
+        justify-content: center;
         text-align: center;
      }
+     #jogar img {
+        margin: 13% auto;
+        width: 400px;
+       
+
+       
+
+     }
+        
+
      
      img{
         margin-top: 2%;
         width: 70%;
+     }
+     #botoes{
+        margin-left:45% ;
+        
+        
      }
    
         .texto1 {
@@ -61,18 +75,20 @@
     }
     </style>
     <div id="jogar">
-        <img src="img/play-animation.gif" alt="">
+        <img id="btnplay" src="img/BOTAOOF.png" alt="">
     </div>
     
     <div id="container">
         
         <img id="quadro" src="img/cutscene/0.png" alt="">
         <p class="texto"></p>
-        <button id="skip">Pular</button>
-        
         
 
     </div>
+    <div id="botoes">
+        <button id="menu">Menu</button>
+        <button id="skip">Pular</button>
+        </div>
     
     <script src="/js/index.js" type="module"></script>
     <script type="module">
@@ -82,10 +98,18 @@
 
         import { Animacao } from './js/index.js'
         let container = document.querySelector("#container")
+        let botoes = document.querySelector("#botoes")
         let jogar = document.querySelector("#jogar")
         let btnskip = document.querySelector("#skip")
         let animacao = new Animacao();
         let img = document.querySelector("#quadro")
+        let btnplay = document.querySelector("#jogar #btnplay")
+        
+
+btnplay.addEventListener("click", ()=>{
+
+    console.log("entrou")
+})
         
          let pular = false
 
@@ -148,7 +172,15 @@
        
 
         
-        
+        function ON(){
+          
+          btnplay.src = "img/BOTAOON.png"
+          console.log("funcionou")
+        }
+        function OFF(){
+            
+            btnplay.src= "img/BOTAOOF.png"
+        }
         texto.innerHTML = fala[0]
         let botao = document.querySelector("body")
 
@@ -181,6 +213,7 @@
             if(animacao.getContador() == 9){
                 container.style.display = 'none'
                 jogar.style.display = 'block'
+                botoes.innerHTML=''
             }
             else{
                 
@@ -215,6 +248,8 @@
         
         botao.addEventListener('click', TrocarFala)
         btnskip.addEventListener('click', Skip)
+        btnplay.addEventListener('onmouseover', ON)
+        btnplay.addEventListener('onmouseout', OFF)
 
         
 
