@@ -1,6 +1,6 @@
 <div class="modal" id="modalr">
     <div id="rank" class="content">
-        <table onload="pontuacoesPosicao()">
+        <table>
             <tr>
                 <td colspan="3" id="titulo">RANKING</td>
             </tr>
@@ -27,54 +27,6 @@
                 <td><button id="prevButton">Prévio</button></td>
                 <td><button id="proxButton">Próximo</button></td>
             </tr>
-
-            <tr>
-                <td colspan="3" id="footer">
-                    &copy; TI93 2023. Todos os direitos reservados.
-                </td>
-            </tr>
         </table>
-
-
-        <script>
-            let posicoes = document.getElementsByClassName('posicao');
-            let nicks = document.getElementsByClassName("nicks");
-            let pontuacao = document.getElementsByClassName("pontuacao");
-            let pageSize = 20;
-            let currentPage = 1;
-
-            const renderPage = () => {
-                let startIndex = (currentPage - 1) * pageSize;
-                let endIndex = startIndex + pageSize;
-
-                for (let i = 0; i < nicks.length; i++) {
-                    if (i >= startIndex && i < endIndex) {
-                        nicks[i].style.display = "";
-                        pontuacao[i].style.display = "";
-                        posicoes[i].style.display = "";
-                    } else {
-                        nicks[i].style.display = "none";
-                        pontuacao[i].style.display = "none";
-                        posicoes[i].style.display = "none";
-                    }
-                }
-            };
-
-            renderPage();
-
-            document.getElementById('proxButton').addEventListener('click', () => {
-                if (currentPage < Math.ceil(nicks.length / pageSize)) {
-                    currentPage++;
-                    renderPage();
-                }
-            });
-
-            document.getElementById('prevButton').addEventListener('click', () => {
-                if (currentPage > 1) {
-                    currentPage--;
-                    renderPage();
-                }
-            });
-        </script>
     </div>
 </div>
