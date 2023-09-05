@@ -115,7 +115,7 @@ btnrank.addEventListener('click', switchModalRank);
 let posicoes = document.getElementsByClassName('posicao');
 let nicks = document.getElementsByClassName("nicks");
 let pontuacao = document.getElementsByClassName("pontuacao");
-let pageSize = 20;
+let pageSize = 10;
 let currentPage = 1;
 
 const renderPage = () => {
