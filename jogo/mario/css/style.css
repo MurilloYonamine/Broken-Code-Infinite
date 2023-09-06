@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(0, #76bde6, #094238); */
+    position: absolute;
+  }
+
+
+.container .fundo {
+    width: 100%; 
+    height: 100%; 
+   
+    position: relative;
+    animation: anime_arvores 40s linear infinite;
+  
+  }
+
+  .fundo:after{
+    content: " ";
+    width: 100%; 
+    height: 100%; 
+    right: 20px ;
+
+    position: relative;
+  }
+
+
+
+.clouds{
+    width: 100%; 
+    height: 100%; 
+    position: absolute;
+    animation: animar_nuvem 105s linear infinite;
+}
+
+
+
+.janela{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: animar_vidro 4s linear infinite;
+    bottom: 0;
+}
+.janela2{
+    position: absolute;
+    transform: translateX(100%);
+    width: 100%;
+    height: 100%;
+    animation: animar_vidro2 4s linear infinite;
+    bottom: 0px;
+
+}
+
+.footer{
+    bottom: 0;
+    position: absolute;
+    width:100% ;
+    height: 65px;
+    animation:  animar_chao 4s linear infinite;
+    
+}
+.footer2{
+    bottom: 0;
+    transform: translateX(+100%);
+    position: absolute;
+    width:100% ;
+    height: 65px;
+    animation: animar_chao2 4s linear infinite;
+}
+.game-board{
+    width: 100%;
+    height: 1100px;
+    border: 1px solid #333;
+    margin: 0;
+    position: relative;
+    overflow: hidden; /* tudo que sair do quadro não aparece na tela*/
+}
+
+.kai{
+    position: absolute;
+    bottom: 65px;
+    width: 150px;
+    left: 150px;
+    
+}
+
+.jump{
+    animation: jump 500ms  ease-out  ;
+}
+
+
+@keyframes jump{
+   0%{
+    bottom: 80px;
+   } 
+
+ 
+   40%{
+    bottom: 320px;
+   }
+   50%{
+    bottom: 320px;
+   }
+  
+   100%{
+    bottom: 80px;
+   }
+}
+.pc{
+    position: absolute;
+    bottom: 65px;
+    width: 100px;
+    
+    animation: computadoreAnimate 3s infinite linear;
+}
+
+/* Animação dos computadores */
+@keyframes computadoreAnimate{
+    from{
+        right: -600px;
+    }
+    to{
+        right: 100%;
+    }
+
+    
+}
+
+/* Animação das Arvores */
+@keyframes anime_arvores {
+    from {
+        transform: translateX(+100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Animação nuvens */
+
+@keyframes animar_nuvem {
+    from {
+        transform: translateX(+100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animar_chao {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+
+@keyframes animar_chao2 {
+    from{
+        transform: translateX(+100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+    
+}
+
+@keyframes animar_vidro {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+
+@keyframes animar_vidro2 {
+    from{
+        transform: translateX(+100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+    
+}
+
+
+
+

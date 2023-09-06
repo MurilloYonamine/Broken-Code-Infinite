@@ -31,9 +31,21 @@
         width: 70%;
      }
      #botoes{
-        margin-left:45% ;
+        margin: auto;
+        text-align: center;
         
         
+        
+        
+     }
+     #botoes button{
+        background-color: rgb(255, 255, 255);
+     }
+     #skip{
+        margin-left: 10px;
+     }
+     #menu{
+        margin-right: 10px;
      }
    
         .texto1 {
@@ -200,10 +212,13 @@ btnplay.addEventListener("click", ()=>{
         typeWrite(texto);
         let Skip = ()=>{
             for(let i = 9; i != animacao.getContador();animacao.addContador()){
-                
+                console.log(i)
             }
             TrocarFala() 
         }
+        let Menu = ()=> {
+            
+        } 
            
        
         let TrocarFala =()=> {
@@ -248,8 +263,8 @@ btnplay.addEventListener("click", ()=>{
         
         botao.addEventListener('click', TrocarFala)
         btnskip.addEventListener('click', Skip)
-        btnplay.addEventListener('onmouseover', ON)
-        btnplay.addEventListener('onmouseout', OFF)
+        btnplay.addEventListener('mouseover', ON)
+        btnplay.addEventListener('mouseout', OFF)
 
         
 
