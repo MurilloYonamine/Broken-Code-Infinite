@@ -64,6 +64,7 @@ button{
     left: 0;
     top: 0;
     width: 100%;
+    max-width: 100%; /* Agora a largura máxima é 100% da largura da tela */
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
@@ -82,6 +83,8 @@ button{
     color: white;
     border: solid black 2px;    
 }
+
+
 
 #caixa {
     background-image: url("/img/ffundo.png");
@@ -103,12 +106,21 @@ button{
     min-height: 310px;
 }
 
+.responsivo {
+    width: 100%;
+    max-width: 100%; /* Agora a largura máxima é 100% da largura da tela */
+    margin: 0 auto;
+    padding: 20px;
+    /* background-color: #f0f0f0; checar o fundo espansivo  */
+}
+
 .modal #sobre {
     margin: 5% auto;
     padding: 20px;
     border-radius: 5px ;
     width: 70% ;
     height: 80%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
