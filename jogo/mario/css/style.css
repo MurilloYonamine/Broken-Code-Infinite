@@ -92,7 +92,7 @@
 }
 
 .jump{
-    animation: jump 500ms  ease-out  ;
+    animation: jump 700ms  ease-out  ;
 }
 
 
@@ -108,6 +108,7 @@
    50%{
     bottom: 320px;
    }
+   
   
    100%{
     bottom: 80px;

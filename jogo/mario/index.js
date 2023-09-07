@@ -9,7 +9,7 @@ function pular(){
 
     setTimeout(()=>{
         kai.classList.remove("jump")
-    },400) 
+    },700) 
 }
 
 // Precisa terminar de configurar
