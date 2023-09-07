@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+#gameover{
+    display: none;
+    justify-content: center;
+    text-align: center;
+    background-color: aliceblue;
+    font-size: 100px;
+    z-index: 10;
+}
 
 .container{
     width: 100%;
@@ -20,7 +28,12 @@
     animation: anime_arvores 40s linear infinite;
   
   }
-
+.pontos{
+    width: 25%;
+    background-color: rgb(255, 13, 13);
+    margin: 15% auto;
+    
+}
   .fundo:after{
     content: " ";
     width: 100%; 
@@ -67,6 +80,7 @@
     
 }
 .footer2{
+    
     bottom: 0;
     transform: translateX(+100%);
     position: absolute;
@@ -75,6 +89,7 @@
     animation: animar_chao2 4s linear infinite;
 }
 .game-board{
+    
     width: 100%;
     height: 1100px;
     border: 1px solid #333;
@@ -138,10 +153,10 @@
 /* Animação das Arvores */
 @keyframes anime_arvores {
     from {
-        transform: translateX(+100%);
+        left: 100%;
     }
     to {
-        transform: translateX(-100%);
+        left: -100%;
     }
 }
 
@@ -149,49 +164,49 @@
 
 @keyframes animar_nuvem {
     from {
-        transform: translateX(+100%);
+        left: 100%;
     }
     to {
-        transform: translateX(-100%);
+        left: -100%;
     }
 }
 
 @keyframes animar_chao {
     from{
-        transform: translateX(0%);
+        left: 0%;
     }
     to{
-        transform: translateX(-100%);
+        left: -100%;
     }
     
 }
 
 @keyframes animar_chao2 {
     from{
-        transform: translateX(+100%);
+        left: 0;
     }
     to{
-        transform: translateX(0%);
+        left: -100%;
     }
     
 }
 
 @keyframes animar_vidro {
     from{
-        transform: translateX(0%);
+        left: 0;
     }
     to{
-        transform: translateX(-100%);
+        left: -100%;
     }
     
 }
 
 @keyframes animar_vidro2 {
     from{
-        transform: translateX(+100%);
+        left: 0;
     }
     to{
-        transform: translateX(0%);
+        left: -100%;
     }
     
 }
