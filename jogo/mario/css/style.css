@@ -7,9 +7,9 @@
     display: none;
     justify-content: center;
     text-align: center;
-    background-color: aliceblue;
     font-size: 100px;
     z-index: 10;
+    /* position: relative; */
 }
 
 .container{
@@ -30,7 +30,7 @@
   }
 .pontos{
     width: 25%;
-    background-color: rgb(255, 13, 13);
+    background-color: rgb(201, 11, 11);
     margin: 15% auto;
     
 }

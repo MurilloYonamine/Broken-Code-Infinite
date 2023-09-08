@@ -60,6 +60,9 @@ console.log(arvoresPosition)
     chao2.style.left=`${chao2Position}px`;
     over.style.display= "block"
 
+    kai.style.animation = 'none'
+    kai.style.bottom=`${kaiPosition}px`
+
 
     clearInterval(loop);
 }
@@ -82,7 +85,6 @@ document.addEventListener("keydown", (event)=>{
     
     
 } )
-
 
 
 // Fundo
