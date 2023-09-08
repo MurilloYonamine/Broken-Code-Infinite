@@ -42,7 +42,10 @@ const loop = setInterval(()=>{
 //o sinal de mais converte para numeros
 const kaiPosition= +window.getComputedStyle(kai).bottom.replace("px","")
 console.log(arvoresPosition)
+
  if(pipPosition<=250 && pipPosition>0 && kaiPosition<80){
+
+    
 
     pc.style.animation ="none";
     pc.style.left=`${pipPosition}px`;
@@ -73,6 +76,7 @@ updateScore();
 },50)
 
 
+
 document.addEventListener("keydown", (event)=>{
     console.log(event)
 
@@ -87,6 +91,7 @@ document.addEventListener("keydown", (event)=>{
 } )
 
 
+
 // Fundo
 let tamanhoFundo=document.querySelector(".game-board")
 
@@ -94,3 +99,4 @@ tamanhoFundo.addEventListener("load",()=>{
 
     return tamanhoFundo.clientWidth
 })
+

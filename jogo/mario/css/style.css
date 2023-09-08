@@ -12,6 +12,12 @@
     /* position: relative; */
 }
 
+.gcontainer{
+    
+    
+    position: relative;
+}
+
 .container{
     width: 100%;
     height: 100%;
@@ -23,13 +29,13 @@
 .container .fundo {
     width: 100%; 
     height: 100%; 
-   
     position: relative;
     animation: anime_arvores 40s linear infinite;
   
   }
 .pontos{
-    width: 25%;
+    height: 0%;
+    width: 100%;
     background-color: rgb(201, 11, 11);
     margin: 15% auto;
     
