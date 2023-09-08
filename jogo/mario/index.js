@@ -5,8 +5,8 @@ const nuvem= document.querySelector(".clouds")
 const janela= document.querySelector(".janela")
 const janela2= document.querySelector(".janela2")
 const chao= document.querySelector(".footer")
-const chao2= document.querySelector(".footer2")
-const over= document.querySelector("#gameover")
+const chao2= document.querySelector(".footer2")  //. sao usados para pegar a classes
+const over= document.querySelector("#gameover") //# sao usadas para chamar id
 const scoreElement = document.querySelector("#score"); // Adicione um elemento HTML para exibir a pontuação
 let score = 0;
 
