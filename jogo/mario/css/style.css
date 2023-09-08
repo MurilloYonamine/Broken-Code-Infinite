@@ -111,6 +111,14 @@
     left: 150px;
     
 }
+kaiFinal{
+    position: absolute;
+    bottom: 65px;
+    width: 150px;
+    left: 500px;
+    
+} 
+
 
 .jump{
     animation: jump 700ms  ease-out  ;
