@@ -30,7 +30,7 @@
     width: 100%; 
     height: 100%; 
     position: relative;
-    animation: anime_arvores 40s linear infinite;
+    animation: anime_arvores 10s linear infinite;
   
   }
 .pontos{
@@ -55,7 +55,7 @@
     width: 100%; 
     height: 100%; 
     position: absolute;
-    animation: animar_nuvem 105s linear infinite;
+    animation: animar_nuvem 10s linear infinite;
 }
 
 

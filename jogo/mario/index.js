@@ -8,7 +8,7 @@ const chao = document.querySelector(".footer")
 const chao2 = document.querySelector(".footer2")  //. sao usados para pegar a classes
 const over = document.querySelector("#gameover") //# sao usadas para chamar id
 const scoreElement = document.querySelector("#score"); // Adicione um elemento HTML para exibir a pontuação
-const kaiFinal = document.querySelector(".kaiFinal")
+const kaiFinal = document.querySelector(".kaiFinal") //parte fianl do jogo
 let score = 0;
 
 
@@ -45,7 +45,7 @@ const loop = setInterval(() => {
     const kaiPosition = +window.getComputedStyle(kai).bottom.replace("px", "")
     console.log(arvoresPosition)
 
-    if (pipPosition <= 250 && pipPosition > 0 && kaiPosition < 80) {
+    if (pipPosition <= 280 && pipPosition > 10 && kaiPosition < 80) {
 
 
 
