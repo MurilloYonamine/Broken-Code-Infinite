@@ -76,12 +76,6 @@ const loop = setInterval(() => {
     updateScore();
     if(score === 500 ){
 
-
-        
-
-        
-        
-       
     }
 
 }, 50)
@@ -94,11 +88,7 @@ document.addEventListener("keydown", (event) => {
     if (event.keyCode == "32" | event.keyCode == 38) {
         console.log("entrou no se")
         pular()
-
-
     }
-
-
 })
 
 

@@ -12,6 +12,7 @@ const user = require("./models/User");
 const pontuacao = require("./models/Pontuacao");
 
 // Import Routes
+const jogoRoutes = require("./routes/jogoRoutes");
 const authRoutes = require("./routes/authRoutes");
 const pontRoutes = require("./routes/pontRoutes");
 const homeRoutes = require("./routes/homeRoutes");
@@ -46,6 +47,7 @@ app.use(express.static("public"));
 //Routes
 
 app.use("/", authRoutes);
+app.use("/jogo", jogoRoutes);
 app.use("/", pontRoutes);
 app.use("/", homeRoutes);
 

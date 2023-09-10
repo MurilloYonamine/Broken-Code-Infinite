@@ -27,7 +27,7 @@ module.exports = class AuthController {
 
     //Inicialização sessão
 
-    res.render("logado", { loginMensagem: "Login realizado com sucesso!" });
+    res.render("jogo/logado");
   }
 
   static async registrarPost(req, res) {
