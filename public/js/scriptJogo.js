@@ -117,7 +117,7 @@ const loop = setInterval(() => {
 
     //aqui entrará a parte do boss 
     updateScore();
-    if (score === 800) {
+    if (score === 2200) {
 
     }
 
