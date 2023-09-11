@@ -16,9 +16,7 @@ function updateScore() {
     scoreElement.innerText = `Pontuação: ${score}`;
 
     // Verifique se a pontuação é um múltiplo de 100
-    if (score % 100 === 0) {
-        increasePcSpeed();
-    }
+
     renderScoreForm(score);
 }
 
@@ -44,17 +42,44 @@ function pular() {
 
 // Precisa terminar de configurar
 const loop = setInterval(() => {
+   
     const arvoresPosition = arvores.offsetLeft;
     const nuvemPosition = nuvem.offsetLeft;
     const janelaPosition = janela.offsetLeft;
     const janela2Position = janela2.offsetLeft;
     const chaoPosition = chao.offsetLeft;
     const chao2Position = chao2.offsetLeft;
-    const pipPosition = pc.offsetLeft; //pegando o afastamento da esquerda
+    const pipPosition = pc.offsetLeft;
+      //pegando o afastamento da esquerda
     //Para pegar qualquer propriedade do css fazemos
     //o sinal de mais converte para numeros
     const kaiPosition = +window.getComputedStyle(kai).bottom.replace("px", "");
-    console.log(arvoresPosition);
+    if(score === 300){
+        
+        pc.style.animation = "computadoreAnimate 2.5s infinite linear"
+        console.log("aumentou")
+    }
+    if(score === 600 ){
+        
+        pc.style.animation = "computadoreAnimate 2s infinite linear"
+        console.log("aumentou")
+    }
+    if(score === 960){
+        
+        pc.style.animation = "computadoreAnimate 1.7s infinite linear"
+        console.log("aumentou")
+    }
+    if(score === 1325 ){
+        
+        pc.style.animation = "computadoreAnimate 1.3s infinite linear"
+        console.log("aumentou")
+    }if(score === 1900 ){
+        
+        pc.style.animation = "computadoreAnimate 1s infinite linear"
+        console.log("aumentou")
+    }
+    
+    
 
     if (pipPosition <= 280 && pipPosition > 10 && kaiPosition < 80) {
 
@@ -81,6 +106,7 @@ const loop = setInterval(() => {
 
         kai.style.animation = 'none';
         kai.style.bottom = `${kaiPosition}px`;
+        
 
 
         clearInterval(loop);
