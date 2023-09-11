@@ -80,7 +80,7 @@ const loop = setInterval(() => {
     }
     
     
-
+    //colisao e fim de jogo
     if (pipPosition <= 280 && pipPosition > 10 && kaiPosition < 80) {
 
 
@@ -106,10 +106,10 @@ const loop = setInterval(() => {
 
         kai.style.animation = 'none';
         kai.style.bottom = `${kaiPosition}px`;
-        kai.src = '/img/death.gif'
-        setTimeout(function () { kai.src = "" }, 700);
+        
 
 
+        
 
 
         clearInterval(loop);
