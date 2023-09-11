@@ -1,17 +1,15 @@
-const kai = document.querySelector(".kai")
-const pc = document.querySelector(".pc")
-const arvores = document.querySelector(".fundo")
-const nuvem = document.querySelector(".clouds")
-const janela = document.querySelector(".janela")
-const janela2 = document.querySelector(".janela2")
-const chao = document.querySelector(".footer")
-const chao2 = document.querySelector(".footer2")  //. sao usados para pegar a classes
-const over = document.querySelector("#gameover") //# sao usadas para chamar id
+const kai = document.querySelector(".kai");
+const pc = document.querySelector(".pc");
+const arvores = document.querySelector(".fundo");
+const nuvem = document.querySelector(".clouds");
+const janela = document.querySelector(".janela");
+const janela2 = document.querySelector(".janela2");
+const chao = document.querySelector(".footer");
+const chao2 = document.querySelector(".footer2");  //. sao usados para pegar a classes
+const over = document.querySelector("#gameover"); //# sao usadas para chamar id
 const scoreElement = document.querySelector("#score"); // Adicione um elemento HTML para exibir a pontuação
-const kaiFinal = document.querySelector(".kaiFinal") //parte fianl do jogo
+const kaiFinal = document.querySelector(".kaiFinal"); //parte fianl do jogo
 let score = 0;
-
-
 
 function updateScore() {
     score += 1;
@@ -21,14 +19,27 @@ function updateScore() {
     if (score % 100 === 0) {
         increasePcSpeed();
     }
+    renderScoreForm(score);
+}
+
+
+
+function renderScoreForm(score) {
+    const form = `
+        <input type="hidden" name="score" value="${score}">
+    `;
+
+    // Inclua o formulário oculto onde você deseja na sua página HTML usando Handlebars
+    // Por exemplo, você pode inseri-lo em um elemento com um ID específico na página
+    document.getElementById('scoreFormContainer').innerHTML = form;
 }
 
 function pular() {
-    kai.classList.add("jump")
+    kai.classList.add("jump");
 
     setTimeout(() => {
-        kai.classList.remove("jump")
-    }, 700)
+        kai.classList.remove("jump");
+    }, 700);
 }
 
 // Precisa terminar de configurar
@@ -42,8 +53,8 @@ const loop = setInterval(() => {
     const pipPosition = pc.offsetLeft; //pegando o afastamento da esquerda
     //Para pegar qualquer propriedade do css fazemos
     //o sinal de mais converte para numeros
-    const kaiPosition = +window.getComputedStyle(kai).bottom.replace("px", "")
-    console.log(arvoresPosition)
+    const kaiPosition = +window.getComputedStyle(kai).bottom.replace("px", "");
+    console.log(arvoresPosition);
 
     if (pipPosition <= 280 && pipPosition > 10 && kaiPosition < 80) {
 
@@ -63,10 +74,13 @@ const loop = setInterval(() => {
         chao.style.left = `${chaoPosition}px`;
         chao2.style.animation = "none";
         chao2.style.left = `${chao2Position}px`;
-        over.style.display = "block"
+        over.style.display = "flex";
+        over.style.flexDirection = "column";
+        over.style.justifyContent = "center";
+        over.style.justifyItems = "center";
 
-        kai.style.animation = 'none'
-        kai.style.bottom = `${kaiPosition}px`
+        kai.style.animation = 'none';
+        kai.style.bottom = `${kaiPosition}px`;
 
 
         clearInterval(loop);
@@ -74,30 +88,30 @@ const loop = setInterval(() => {
 
     //aqui entrará a parte do boss 
     updateScore();
-    if(score === 500 ){
+    if (score === 500) {
 
     }
 
-}, 50)
+}, 50);
 
 
 
 document.addEventListener("keydown", (event) => {
-    console.log(event)
+    console.log(event);
 
     if (event.keyCode == "32" | event.keyCode == 38) {
-        console.log("entrou no se")
-        pular()
+        console.log("entrou no se");
+        pular();
     }
-})
+});
 
 
 
 // Fundo
-let tamanhoFundo = document.querySelector(".game-board")
+let tamanhoFundo = document.querySelector(".game-board");
 
 tamanhoFundo.addEventListener("load", () => {
 
-    return tamanhoFundo.clientWidth
+    return tamanhoFundo.clientWidth;
 })
 

@@ -1,19 +1,19 @@
 <div class="game-board">
 
-    <div class="container">
-        <img src="/img/jogo/fundo/fundo.png" class="container">
+    <div class="containerJogo">
+        <img src="/img/jogo/fundo/fundo.png" class="containerJogo">
 
 
     </div>
     <!-- Nuvens -->
-    <div class="container">
+    <div class="containerJogo">
         <img src="/img/jogo/fundo/clouds.png" class="clouds">
     </div>
 
 
 
     <!-- Arvores -->
-    <div class="container">
+    <div class="containerJogo">
 
         <img src="/img/jogo/fundo/arvores.png" class="fundo">
 
@@ -25,7 +25,7 @@
     <img src="/img/jogo/fundo/vidros.png" class="janela"><img src="/img/jogo/fundo/vidros.png" class="janela2">
 
     <!-- Plataforma -->
-    <img src="/img/jogo/fundo/footer.png" class="footer"> <img src="/img/jogo/fundo/footer.png" class="footer2" alt="">
+    <img src="/img/jogo/fundo/footer.png" class="footer"> <img src="/img/jogo/fundo/footer.png" class="footer2">
 
 
 
@@ -38,15 +38,17 @@
 
     <div class="pontos gcontainer">
 
-
-        <h2 id="score" style="margin-left: 50%; color: #53cb0e; border: solid green; margin-right: 42%;"></h2>
-        <div id="gameover" class="container">
-            <h1 style="color: chartreuse;">Game over</h1>
+        <h2 id="score" class="d-flex justify-content-center text-center"></h2>
+        <div id="gameover" class="containerJogo ">
+            <h1 class="py-5 text-center">Game over</h1>
+            <form action="/pontuacao" method="POST" class="d-flex justify-content-center" data-user-id="{{userId}}">
+                <input type="hidden" name="userId" value="{{userId}}">
+                <div id="scoreFormContainer"></div>
+                <input id="botaoVoltar" type="submit" class="btn btn-success display-6 d-flex justify-content-center"
+                    value="Voltar para a Página Principal">
+            </form>
         </div>
-
     </div>
 
 </div>
-
-
 <script src="/js/scriptJogo.js"></script>

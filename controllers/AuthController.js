@@ -11,6 +11,7 @@ module.exports = class AuthController {
 
     // encontrar o usuário
     const user = await User.findOne({ where: { UsNickname: nick } });
+    const userId = user.UsCodigo;
 
     if (!user) {
       res.render("home", { erroLogin: "Nick não encontrado!" });
@@ -24,10 +25,8 @@ module.exports = class AuthController {
       res.render("home", { erroLogin: "Senha incorreta!" });
       return;
     }
+    res.render('jogo/logado', { userId });
 
-    //Inicialização sessão
-
-    res.render("jogo/logado");
   }
 
   static async registrarPost(req, res) {

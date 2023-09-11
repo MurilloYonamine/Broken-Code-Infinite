@@ -103,7 +103,7 @@
     }
 </style>
 <div id="jogar">
-    <a href="jogo/index"><img id="btnplay" src="img/BOTAOOF.png" alt=""></a>
+    <a href="/jogo/index/{{userId}}"><img id="btnplay" src="img/BOTAOOF.png" alt=""></a>
 </div>
 
 <div id="container">
@@ -136,45 +136,35 @@
 
     btnplay.addEventListener("click", () => {
 
-        console.log("entrou");
     });
 
     let pular = false;
 
-    console.log(animacao.getContador());
     const texto = document.querySelector(".texto");
     function ler() {
         if (animacao.getContador() == 0) {
             setTimeout(function () { pular = true; }, 9000);
-            console.log("9");
         }
         else if (animacao.getContador() == 1) {
             setTimeout(function () { pular = true; }, 4500);
-            console.log("4");
         }
         else if (animacao.getContador() == 2) {
             setTimeout(function () { pular = true; }, 6000);
-            console.log("5");
         }
         else if (animacao.getContador() == 3) {
             setTimeout(function () { pular = true; }, 7000);
-            console.log("7");
         }
         else if (animacao.getContador() == 4) {
             setTimeout(function () { pular = true; }, 3000);
-            console.log("3");
         }
         else if (animacao.getContador() == 5) {
             setTimeout(function () { pular = true; }, 500);
-            console.log("1");
         }
         else if (animacao.getContador() == 6) {
             setTimeout(function () { pular = true; }, 500);
-            console.log("1");
         }
         else if (animacao.getContador() == 7) {
             setTimeout(function () { pular = true; }, 500);
-            console.log("1");
         }
 
 
@@ -195,7 +185,6 @@
     function ON() {
 
         btnplay.src = "img/BOTAOON.png";
-        console.log("funcionou");
     }
     function OFF() {
 
@@ -220,7 +209,6 @@
     typeWrite(texto);
     let Skip = () => {
         for (let i = 9; i != animacao.getContador(); animacao.addContador()) {
-            console.log(i);
         }
         TrocarFala();
     };
@@ -243,7 +231,6 @@
             if (pular == true) {
 
                 img.src = "img/cutscene/" + animacao.getContadorImg() + ".png";
-                console.log(animacao.getContadorImg());
                 animacao.addContadorImg();
                 if (animacao.getContador() < 5) {
                     texto.innerHTML = fala[animacao.getContador()];

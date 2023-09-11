@@ -1,7 +1,6 @@
-const express = require("express");
-const exphbs = require("express-handlebars");
-
-const path = require("path");
+const express = require('express');
+const exphbs = require('express-handlebars');
+const path = require('path');
 
 const app = express();
 
@@ -45,9 +44,8 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //Routes
-
-app.use("/", authRoutes);
 app.use("/jogo", jogoRoutes);
+app.use("/", authRoutes);
 app.use("/", pontRoutes);
 app.use("/", homeRoutes);
 
