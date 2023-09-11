@@ -106,7 +106,10 @@ const loop = setInterval(() => {
 
         kai.style.animation = 'none';
         kai.style.bottom = `${kaiPosition}px`;
-        
+        kai.src = '/img/death.gif'
+        setTimeout(function () { kai.src = "" }, 700);
+
+
 
 
         clearInterval(loop);
