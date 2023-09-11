@@ -44,7 +44,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //Routes
-app.use("/jogo", jogoRoutes);
+app.use("/", jogoRoutes);
 app.use("/", authRoutes);
 app.use("/", pontRoutes);
 app.use("/", homeRoutes);
