@@ -156,6 +156,20 @@ kaiFinal {
 
     animation: computadoreAnimate 3s infinite linear;
 }
+.boss{
+    display: none;
+    position: absolute;
+    bottom: 65px;
+    width: 250px;
+    left: 1500px;
+}
+.mouse{
+    position: absolute;
+    bottom: 80px;
+    width: 100px;
+    animation: animar_mouse 3s infinite linear;
+    display: none;
+}
 
 /* Animação dos computadores */
 @keyframes computadoreAnimate {
@@ -235,4 +249,13 @@ kaiFinal {
         left: -100%;
     }
 
+}
+
+@keyframes animar_mouse{
+    from {
+        right: 255px;
+    }
+    to {
+        right: 100%;
+    }
 }

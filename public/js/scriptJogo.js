@@ -9,10 +9,12 @@ const chao2 = document.querySelector(".footer2");  //. sao usados para pegar a c
 const over = document.querySelector("#gameover"); //# sao usadas para chamar id
 const scoreElement = document.querySelector("#score"); // Adicione um elemento HTML para exibir a pontuação
 const kaiFinal = document.querySelector(".kaiFinal"); //parte fianl do jogo
+const boss = document.querySelector(".boss");
+const mouse = document.querySelector(".mouse");
 let score = 0;
 
 function updateScore() {
-    score += 1;
+    score += 50;
     scoreElement.innerText = `Pontuação: ${score}`;
 
     // Verifique se a pontuação é um múltiplo de 100
@@ -119,7 +121,8 @@ const loop = setInterval(() => {
     updateScore();
     if (score === 2200) {
       pc.style.display ="none"
-      boss.style.displey = "block"
+      boss.style.display = "block"
+      setTimeout(function() {mouse.style.display = "block"}, 3000)
     }
 
 }, 50);
