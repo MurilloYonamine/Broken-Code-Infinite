@@ -15,7 +15,7 @@ const mouse2 = document.querySelector(".mouse2")
 let score = 3800;
 
 function updateScore() {
-   
+
     score += 1;
     scoreElement.innerText = `Pontuação: ${score}`;
 
@@ -43,10 +43,17 @@ function pular() {
         kai.classList.remove("jump");
     }, 700);
 }
+// function pular2() {
+//     kai.classList.add("jump2");
+
+//     setTimeout(() => {
+//         kai.classList.remove("jump2");
+//     }, 500);
+// }
 
 // Precisa terminar de configurar
 const loop = setInterval(() => {
-   
+
     const arvoresPosition = arvores.offsetLeft;
     const nuvemPosition = nuvem.offsetLeft;
     const janelaPosition = janela.offsetLeft;
@@ -56,36 +63,36 @@ const loop = setInterval(() => {
     const pipPosition = pc.offsetLeft;
     const mousePosition = mouse.offsetLeft;
     const mouse2Position = mouse2.offsetLeft;
-      //pegando o afastamento da esquerda
+    //pegando o afastamento da esquerda
     //Para pegar qualquer propriedade do css fazemos
     //o sinal de mais converte para numeros
     const kaiPosition = +window.getComputedStyle(kai).bottom.replace("px", "");
-    if(score === 300){
-        
+    if (score === 300) {
+
         pc.style.animation = "computadoreAnimate 2.5s infinite linear"
         console.log("aumentou")
     }
-    if(score === 600 ){
-        
+    if (score === 600) {
+
         pc.style.animation = "computadoreAnimate 2s infinite linear"
         console.log("aumentou")
     }
-    if(score === 960){
-        
+    if (score === 960) {
+
         pc.style.animation = "computadoreAnimate 1.7s infinite linear"
         console.log("aumentou")
     }
-    if(score === 1325 ){
-        
+    if (score === 1325) {
+
         pc.style.animation = "computadoreAnimate 1.3s infinite linear"
         console.log("aumentou")
-    }if(score === 1900 ){
-        
+    } if (score === 1900) {
+
         pc.style.animation = "computadoreAnimate 1s infinite linear"
         console.log("aumentou")
     }
-    
-    
+
+
 
     // if (pipPosition <= 280 && pipPosition > 10 && kaiPosition < 80) {
 
@@ -113,6 +120,8 @@ const loop = setInterval(() => {
     //     kai.style.animation = 'none';
     //     kai.style.bottom = `${kaiPosition}px`;
     //     kai.src = '/img/death.gif'
+    // kai.style.width = "130px"
+    //     kai.style.marginLeft = "30px"
     //     setTimeout(function () { kai.src = "" }, 700);
 
 
@@ -146,6 +155,8 @@ const loop = setInterval(() => {
         kai.style.animation = 'none';
         kai.style.bottom = `${kaiPosition}px`;
         kai.src = '/img/death.gif'
+        kai.style.width = "130px"
+        kai.style.marginLeft = "30px"
         setTimeout(function () { kai.src = "" }, 700);
 
 
@@ -179,6 +190,8 @@ const loop = setInterval(() => {
         kai.style.animation = 'none';
         kai.style.bottom = `${kaiPosition}px`;
         kai.src = '/img/death.gif'
+        kai.style.width = "130px"
+        kai.style.marginLeft = "30px"
         setTimeout(function () { kai.src = "" }, 700);
 
 
@@ -190,33 +203,69 @@ const loop = setInterval(() => {
     //aqui entrará a parte do boss 
     updateScore();
     if (score => 2200) {
-      pc.style.display ="none"
-      boss.style.display = "block"
-      setTimeout(function() {mouse.style.display = "block"}, 3000)
+        pc.style.display = "none"
+        boss.style.display = "block"
+        setTimeout(function () { mouse.style.display = "block" }, 3000)
     }
-    if (score === 2505){
-        mouse.style.animation= "animar_mouse 2.5s infinite linear"
+    if (score === 2505) {
+        mouse.style.animation = "animar_mouse 2.5s infinite linear"
         console.log("aumentou")
 
 
     }
-    if( score === 3010){
-        mouse.style.animation= "animar_mouse 2s infinite linear"
+    if (score === 3010) {
+        mouse.style.animation = "animar_mouse 2s infinite linear"
         console.log("aumentou")
     }
-    if ( score === 3420){
-        mouse.style.animation= "animar_mouse 1.5s infinite linear"
+    if (score === 3420) {
+        mouse.style.animation = "animar_mouse 1.5s infinite linear"
         console.log("aumentou")
     }
-    if ( score === 3810){
-        mouse.style.animation= "animar_mouse 1s infinite linear"
+    if (score === 3810) {
+        mouse.style.animation = "animar_mouse 1s infinite linear"
         console.log("aumentou")
     }
-    if ( score === 4100){
-        mouse2.style.display= "block"
+    if (score === 4100) {
+        mouse2.style.display = "block"
+        kai.style.animation = "animation: jump 500ms ease-out;"
+        console.log('pulo mudou')
+
+        
+
+
+
+
+
     }
+
+    // if(score === 4000){
+
+    //     document.addEventListener("keydown", (event) => {
+    //         console.log(event);
+        
+    //         if (event.keyCode == "32" | event.keyCode == 38) {
+    //             console.log("entrou no seu... ");
+    //             pular2();
+    //         }
+    //     });
+        
+    //     function pular2() {
+    //         kai.classList.add("jump2");
+        
+    //         setTimeout(() => {
+    //             kai.classList.remove("jump2");
+    //         }, 500);
+        
+    //     }
+    //     removeEventListener("jump")
+    // }
+
+
 
 }, 50);
+
+
+
 
 
 
@@ -228,6 +277,7 @@ document.addEventListener("keydown", (event) => {
         pular();
     }
 });
+
 
 
 

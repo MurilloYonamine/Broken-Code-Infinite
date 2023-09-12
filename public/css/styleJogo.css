@@ -126,6 +126,9 @@ kaiFinal {
 .jump {
     animation: jump 700ms ease-out;
 }
+.jump2 {
+    animation: jump 500ms ease-out;
+}
 
 
 @keyframes jump {
