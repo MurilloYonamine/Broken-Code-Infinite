@@ -170,6 +170,13 @@ kaiFinal {
     animation: animar_mouse 3s infinite linear;
     display: none;
 }
+.mouse2{
+    position: absolute;
+    bottom: 80px;
+    width: 100px;
+    animation: animar_mouse2 1.9s infinite linear;
+    display: none;
+}
 
 /* Animação dos computadores */
 @keyframes computadoreAnimate {
@@ -254,6 +261,14 @@ kaiFinal {
 @keyframes animar_mouse{
     from {
         right: 255px;
+    }
+    to {
+        right: 100%;
+    }
+}
+@keyframes animar_mouse2{
+    from {
+        right: 355px;
     }
     to {
         right: 100%;

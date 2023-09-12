@@ -11,7 +11,8 @@ const scoreElement = document.querySelector("#score"); // Adicione um elemento H
 const kaiFinal = document.querySelector(".kaiFinal"); //parte fianl do jogo
 const boss = document.querySelector(".boss");
 const mouse = document.querySelector(".mouse");
-let score = 0;
+const mouse2 = document.querySelector(".mouse2")
+let score = 3800;
 
 function updateScore() {
    
@@ -54,6 +55,7 @@ const loop = setInterval(() => {
     const chao2Position = chao2.offsetLeft;
     const pipPosition = pc.offsetLeft;
     const mousePosition = mouse.offsetLeft;
+    const mouse2Position = mouse2.offsetLeft;
       //pegando o afastamento da esquerda
     //Para pegar qualquer propriedade do css fazemos
     //o sinal de mais converte para numeros
@@ -151,14 +153,67 @@ const loop = setInterval(() => {
 
         clearInterval(loop);
     }
-    
+    if (mouse2Position <= 280 && mouse2Position > 10 && kaiPosition < 80) {
+
+
+
+        mouse.style.animation = "none";
+        mouse.style.left = `${mousePosition}px`;
+        arvores.style.animation = "none";
+        arvores.style.left = `${arvoresPosition}px`;
+        nuvem.style.animation = "none";
+        nuvem.style.left = `${nuvemPosition}px`;
+        janela.style.animation = "none";
+        janela.style.left = `${janelaPosition}px`;
+        janela2.style.animation = "none";
+        janela2.style.left = `${janela2Position}px`;
+        chao.style.animation = "none";
+        chao.style.left = `${chaoPosition}px`;
+        chao2.style.animation = "none";
+        chao2.style.left = `${chao2Position}px`;
+        over.style.display = "flex";
+        over.style.flexDirection = "column";
+        over.style.justifyContent = "center";
+        over.style.justifyItems = "center";
+
+        kai.style.animation = 'none';
+        kai.style.bottom = `${kaiPosition}px`;
+        kai.src = '/img/death.gif'
+        setTimeout(function () { kai.src = "" }, 700);
+
+
+
+
+        clearInterval(loop);
+    }
 
     //aqui entrará a parte do boss 
     updateScore();
-    if (score === 2200) {
+    if (score => 2200) {
       pc.style.display ="none"
       boss.style.display = "block"
       setTimeout(function() {mouse.style.display = "block"}, 3000)
+    }
+    if (score === 2505){
+        mouse.style.animation= "animar_mouse 2.5s infinite linear"
+        console.log("aumentou")
+
+
+    }
+    if( score === 3010){
+        mouse.style.animation= "animar_mouse 2s infinite linear"
+        console.log("aumentou")
+    }
+    if ( score === 3420){
+        mouse.style.animation= "animar_mouse 1.5s infinite linear"
+        console.log("aumentou")
+    }
+    if ( score === 3810){
+        mouse.style.animation= "animar_mouse 1s infinite linear"
+        console.log("aumentou")
+    }
+    if ( score === 4100){
+        mouse2.style.display= "block"
     }
 
 }, 50);
