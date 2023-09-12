@@ -12,7 +12,7 @@ const kaiFinal = document.querySelector(".kaiFinal"); //parte fianl do jogo
 const boss = document.querySelector(".boss");
 const mouse = document.querySelector(".mouse");
 const mouse2 = document.querySelector(".mouse2")
-let score = 3800;
+let score = 0;
 
 function updateScore() {
 
@@ -94,41 +94,41 @@ const loop = setInterval(() => {
 
 
 
-    // if (pipPosition <= 280 && pipPosition > 10 && kaiPosition < 80) {
+    if (pipPosition <= 280 && pipPosition > 10 && kaiPosition < 80) {
 
 
 
-    //     pc.style.animation = "none";
-    //     pc.style.left = `${pipPosition}px`;
-    //     arvores.style.animation = "none";
-    //     arvores.style.left = `${arvoresPosition}px`;
-    //     nuvem.style.animation = "none";
-    //     nuvem.style.left = `${nuvemPosition}px`;
-    //     janela.style.animation = "none";
-    //     janela.style.left = `${janelaPosition}px`;
-    //     janela2.style.animation = "none";
-    //     janela2.style.left = `${janela2Position}px`;
-    //     chao.style.animation = "none";
-    //     chao.style.left = `${chaoPosition}px`;
-    //     chao2.style.animation = "none";
-    //     chao2.style.left = `${chao2Position}px`;
-    //     over.style.display = "flex";
-    //     over.style.flexDirection = "column";
-    //     over.style.justifyContent = "center";
-    //     over.style.justifyItems = "center";
+        pc.style.animation = "none";
+        pc.style.left = `${pipPosition}px`;
+        arvores.style.animation = "none";
+        arvores.style.left = `${arvoresPosition}px`;
+        nuvem.style.animation = "none";
+        nuvem.style.left = `${nuvemPosition}px`;
+        janela.style.animation = "none";
+        janela.style.left = `${janelaPosition}px`;
+        janela2.style.animation = "none";
+        janela2.style.left = `${janela2Position}px`;
+        chao.style.animation = "none";
+        chao.style.left = `${chaoPosition}px`;
+        chao2.style.animation = "none";
+        chao2.style.left = `${chao2Position}px`;
+        over.style.display = "flex";
+        over.style.flexDirection = "column";
+        over.style.justifyContent = "center";
+        over.style.justifyItems = "center";
 
-    //     kai.style.animation = 'none';
-    //     kai.style.bottom = `${kaiPosition}px`;
-    //     kai.src = '/img/death.gif'
-    // kai.style.width = "130px"
-    //     kai.style.marginLeft = "30px"
-    //     setTimeout(function () { kai.src = "" }, 700);
-
-
+        kai.style.animation = 'none';
+        kai.style.bottom = `${kaiPosition}px`;
+        kai.src = '/img/death.gif'
+    kai.style.width = "130px"
+        kai.style.marginLeft = "30px"
+        setTimeout(function () { kai.src = "" }, 700);
 
 
-    //     clearInterval(loop);
-    // }
+
+
+        clearInterval(loop);
+    }
     if (mousePosition <= 280 && mousePosition > 10 && kaiPosition < 80) {
 
 
@@ -164,45 +164,11 @@ const loop = setInterval(() => {
 
         clearInterval(loop);
     }
-    if (mouse2Position <= 280 && mouse2Position > 10 && kaiPosition < 80) {
-
-
-
-        mouse.style.animation = "none";
-        mouse.style.left = `${mousePosition}px`;
-        arvores.style.animation = "none";
-        arvores.style.left = `${arvoresPosition}px`;
-        nuvem.style.animation = "none";
-        nuvem.style.left = `${nuvemPosition}px`;
-        janela.style.animation = "none";
-        janela.style.left = `${janelaPosition}px`;
-        janela2.style.animation = "none";
-        janela2.style.left = `${janela2Position}px`;
-        chao.style.animation = "none";
-        chao.style.left = `${chaoPosition}px`;
-        chao2.style.animation = "none";
-        chao2.style.left = `${chao2Position}px`;
-        over.style.display = "flex";
-        over.style.flexDirection = "column";
-        over.style.justifyContent = "center";
-        over.style.justifyItems = "center";
-
-        kai.style.animation = 'none';
-        kai.style.bottom = `${kaiPosition}px`;
-        kai.src = '/img/death.gif'
-        kai.style.width = "130px"
-        kai.style.marginLeft = "30px"
-        setTimeout(function () { kai.src = "" }, 700);
-
-
-
-
-        clearInterval(loop);
-    }
+    
 
     //aqui entrará a parte do boss 
     updateScore();
-    if (score => 2200) {
+    if (score === 2200) {
         pc.style.display = "none"
         boss.style.display = "block"
         setTimeout(function () { mouse.style.display = "block" }, 3000)
@@ -225,18 +191,7 @@ const loop = setInterval(() => {
         mouse.style.animation = "animar_mouse 1s infinite linear"
         console.log("aumentou")
     }
-    if (score === 4100) {
-        mouse2.style.display = "block"
-        kai.style.animation = "animation: jump 500ms ease-out;"
-        console.log('pulo mudou')
-
-        
-
-
-
-
-
-    }
+    
 
     // if(score === 4000){
 
