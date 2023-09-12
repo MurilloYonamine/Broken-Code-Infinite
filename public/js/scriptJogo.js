@@ -14,7 +14,8 @@ const mouse = document.querySelector(".mouse");
 let score = 0;
 
 function updateScore() {
-    score += 50;
+   
+    score += 1;
     scoreElement.innerText = `Pontuação: ${score}`;
 
     // Verifique se a pontuação é um múltiplo de 100
@@ -52,6 +53,7 @@ const loop = setInterval(() => {
     const chaoPosition = chao.offsetLeft;
     const chao2Position = chao2.offsetLeft;
     const pipPosition = pc.offsetLeft;
+    const mousePosition = mouse.offsetLeft;
       //pegando o afastamento da esquerda
     //Para pegar qualquer propriedade do css fazemos
     //o sinal de mais converte para numeros
@@ -83,12 +85,45 @@ const loop = setInterval(() => {
     
     
 
-    if (pipPosition <= 280 && pipPosition > 10 && kaiPosition < 80) {
+    // if (pipPosition <= 280 && pipPosition > 10 && kaiPosition < 80) {
 
 
 
-        pc.style.animation = "none";
-        pc.style.left = `${pipPosition}px`;
+    //     pc.style.animation = "none";
+    //     pc.style.left = `${pipPosition}px`;
+    //     arvores.style.animation = "none";
+    //     arvores.style.left = `${arvoresPosition}px`;
+    //     nuvem.style.animation = "none";
+    //     nuvem.style.left = `${nuvemPosition}px`;
+    //     janela.style.animation = "none";
+    //     janela.style.left = `${janelaPosition}px`;
+    //     janela2.style.animation = "none";
+    //     janela2.style.left = `${janela2Position}px`;
+    //     chao.style.animation = "none";
+    //     chao.style.left = `${chaoPosition}px`;
+    //     chao2.style.animation = "none";
+    //     chao2.style.left = `${chao2Position}px`;
+    //     over.style.display = "flex";
+    //     over.style.flexDirection = "column";
+    //     over.style.justifyContent = "center";
+    //     over.style.justifyItems = "center";
+
+    //     kai.style.animation = 'none';
+    //     kai.style.bottom = `${kaiPosition}px`;
+    //     kai.src = '/img/death.gif'
+    //     setTimeout(function () { kai.src = "" }, 700);
+
+
+
+
+    //     clearInterval(loop);
+    // }
+    if (mousePosition <= 280 && mousePosition > 10 && kaiPosition < 80) {
+
+
+
+        mouse.style.animation = "none";
+        mouse.style.left = `${mousePosition}px`;
         arvores.style.animation = "none";
         arvores.style.left = `${arvoresPosition}px`;
         nuvem.style.animation = "none";
@@ -116,6 +151,7 @@ const loop = setInterval(() => {
 
         clearInterval(loop);
     }
+    
 
     //aqui entrará a parte do boss 
     updateScore();
