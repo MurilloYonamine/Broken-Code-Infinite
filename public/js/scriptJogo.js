@@ -12,7 +12,7 @@ const kaiFinal = document.querySelector(".kaiFinal"); //parte fianl do jogo
 const boss = document.querySelector(".boss");
 const mouse = document.querySelector(".mouse");
 const mouse2 = document.querySelector(".mouse2")
-let score = 0;
+let score = 2000;
 
 function updateScore() {
 
@@ -129,7 +129,7 @@ const loop = setInterval(() => {
 
         clearInterval(loop);
     }
-    if (mousePosition <= 280 && mousePosition > 10 && kaiPosition < 80) {
+    if (mousePosition <= 250 && mousePosition > 10 && kaiPosition < 80) {
 
 
 

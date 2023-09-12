@@ -170,7 +170,7 @@ kaiFinal {
     position: absolute;
     bottom: 80px;
     width: 100px;
-    animation: animar_mouse 3s infinite linear;
+    animation: animar_mouse 2.5s infinite linear;
     display: none;
 }
 
